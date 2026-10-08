@@ -1,0 +1,3 @@
+# Daily refresh and seasons
+`src/core/schedule.js` decides when to check each mountain: wait for the morning window (default 06:00-10:00 local), poll every 15 min until today's report appears, then retry every 3 h, never more than a day apart. **A server-side job must run it**; phones cannot reliably run scheduled background fetches. Resort publish times are unknown: set per mountain once verified.
+**Seasons:** `src/core/season.js` (months approximate, confirm with each resort). NZ is closed roughly November to May, so the app leads with overseas mountains then. A NZ-only launch is nearly empty in NZ summer: consider enabling overseas earlier (`EXPO_PUBLIC_CURRENT_PHASE`).

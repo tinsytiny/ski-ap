@@ -1,0 +1,4 @@
+# App Store (iOS) and Google Play checklist
+**Apple:** developer account; bundle ID; genuine native value (push, location-gated chat); UGC rules (guideline 1.2: filtering, report, block, contact, timely action); in-app account deletion; Sign in with Apple if you add other social logins; privacy policy URL and in-app link; App Privacy label (account info, user content, precise location, push token/identifiers, diagnostics: confirm); no tracking prompt unless you track; push asked in context; age rating with UGC; metadata and screenshots; review notes with a demo account.
+**Google Play:** account; first upload manually; FCM credentials for Android push; Data safety form; content rating; account-deletion web page; UGC tools; real-device tests.
+**Never submit a sample-data-only app for review.**

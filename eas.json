@@ -1,0 +1,14 @@
+{
+  "cli": { "appVersionSource": "remote" },
+  "build": {
+    "development": { "developmentClient": true, "distribution": "internal" },
+    "preview": { "distribution": "internal", "android": { "buildType": "apk" } },
+    "production": { "autoIncrement": true }
+  },
+  "submit": {
+    "production": {
+      "ios": { "ascAppId": "[APP STORE CONNECT APP ID]" },
+      "android": { "track": "internal", "serviceAccountKeyPath": "[PATH TO GOOGLE PLAY SERVICE ACCOUNT JSON: keep out of git]" }
+    }
+  }
+}

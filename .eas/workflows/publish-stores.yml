@@ -1,0 +1,20 @@
+# NOT VALIDATED. Manual: production builds, then submit to both stores.
+# Do NOT run until real data, backend, hosted policies and account deletion exist.
+name: Publish to stores
+on:
+  workflow_dispatch: {}
+jobs:
+  build_ios:
+    type: build
+    params: { platform: ios, profile: production }
+  build_android:
+    type: build
+    params: { platform: android, profile: production }
+  submit_ios:
+    needs: [build_ios]
+    type: submit
+    params: { build_id: "${{ needs.build_ios.outputs.build_id }}" }
+  submit_android:
+    needs: [build_android]
+    type: submit
+    params: { build_id: "${{ needs.build_android.outputs.build_id }}" }

@@ -1,0 +1,11 @@
+# NOT VALIDATED. Manual trigger: Android + iOS preview builds for testing.
+name: Test builds
+on:
+  workflow_dispatch: {}
+jobs:
+  android_preview:
+    type: build
+    params: { platform: android, profile: preview }
+  ios_preview:
+    type: build
+    params: { platform: ios, profile: preview }
